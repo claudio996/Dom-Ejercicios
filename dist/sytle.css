@@ -1,0 +1,136 @@
+/*set style basic html*/
+
+:root {
+    /*Documento-base*/
+    --maint-font: sans-serif;
+    --main-color: #6dd1ab;
+    --second-color: #5a1e07cc;
+    --main-modal-color: #FF5F7E;
+    --second-modal-color: #B000B9;
+    --container-width: 1200px;
+    --color: rgb(187, 187, 184);
+}
+
+html {
+    /*Reset ayou html*/
+    box-sizing: border-box;
+    font-family: var(--main-color);
+    font-size: var(--maint-font);
+    scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*Menu hamburger*/
+
+.header {
+    position: sticky;
+    top: 0;
+    padding: 1rem;
+    background-color: var(--main-color);
+    color: var(--second-color);
+}
+
+.header h1 {
+    margin: auto;
+    text-align: center;
+    z-index: 997;
+}
+
+.section {
+    padding: 2rem;
+    padding-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: var(--container-width);
+    min-height: 100vh;
+    text-align: center;
+}
+
+.section div.container {
+    background-color: violet;
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%;
+    border-radius: 3rem;
+}
+
+.panel {
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--second-color);
+    transform: translate(0, 100%);
+    visibility: hidden;
+    transition: transform .3s ease;
+}
+
+.panel-btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    right: 1vh;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-color);
+    font-size: 20%;
+    overflow-y: auto;
+}
+
+.panel.is-active {
+    transform: translate(0, 0);
+    visibility: visible;
+}
+
+.menu {
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.menu a {
+    padding: 2 rem;
+    width: inherit;
+    display: block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--color);
+    transition: all 0.3s ease;
+}
+
+.menu a:hover {
+    font-weight: bold;
+    color: var(--color);
+    background-color: var(--main-modal-color);
+}
