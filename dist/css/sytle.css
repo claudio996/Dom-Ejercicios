@@ -166,3 +166,7 @@ img {
     border-radius: 50%;
     margin: auto;
 }
+
+#count-down {
+    background-color: lawngreen;
+}
