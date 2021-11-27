@@ -1,23 +1,31 @@
-/*set style basic html*/
+/*--- reset css elementos raiz de html  ------*/
 
 :root {
-    /*Documento-base*/
-    --maint-font: sans-serif;
-    --main-color: #6dd1ab;
-    --second-color: #5a1e07cc;
-    --main-modal-color: #FF5F7E;
-    --second-modal-color: #B000B9;
+    --main-font: sans-serif;
+    --font-size: 16px;
+    --main-color: #53fdef;
+    --second-color: rgba(61, 12, 12, 0.527);
+    --main-modal-color: rgba(35, 109, 97, 0.85);
+    /*Bajamos la tonalidad a nuestros colores*/
+    --second-modal-color: rgba(110, 48, 24, 0.788);
     --container-width: 1200px;
-    --color: rgb(187, 187, 184);
+    /*Tamaño de container*/
+    --color: rgba(8, 7, 7, 0.76);
 }
 
 html {
-    /*Reset ayou html*/
+    /*Reseteo basico para etiqueta html*/
     box-sizing: border-box;
-    font-family: var(--main-color);
-    font-size: var(--maint-font);
+    /*Tamanio de  la caja*/
+    font-family: var(--main-font);
+    /*Pasamos variables declaradas en nuestro :root*/
+    font-size: var(--font-size);
     scroll-behavior: smooth;
+    /*Barra de navegacion */
 }
+
+
+/*Herencia de todos los elementos html del box sizing */
 
 *,
 *:before,
@@ -36,7 +44,7 @@ img {
 }
 
 
-/*Menu hamburger*/
+/*Menu hamburguesa*/
 
 .header {
     position: sticky;
@@ -47,7 +55,7 @@ img {
 }
 
 .header h1 {
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
     z-index: 997;
 }
@@ -60,6 +68,7 @@ img {
     width: 100%;
     max-width: var(--container-width);
     min-height: 100vh;
+    /* tamanio del viewport definir area de pantalla*/
     text-align: center;
 }
 
@@ -68,10 +77,10 @@ img {
     position: relative;
     width: 100%;
     padding: 2rem;
-    margin-right: auto;
     margin-left: auto;
+    margin-right: auto;
     width: 50%;
-    border-radius: 3rem;
+    border-radius: 2rem;
 }
 
 .panel {
@@ -82,8 +91,8 @@ img {
     left: 0;
     right: 0;
     width: 100%;
-    background-color: var(--second-color);
-    transform: translate(0, 100%);
+    background-color: var(--second-modal-color);
+    /*transform: translate(0,100%) ; /*valores negativos en la web significa ir hacia a arriba*/
     visibility: hidden;
     transition: transform .3s ease;
 }
@@ -92,7 +101,7 @@ img {
     position: fixed;
     z-index: 999;
     bottom: 1vh;
-    right: 1vh;
+    right: 1vw;
     width: 4rem;
     height: 4rem;
     border-radius: 50%;
@@ -120,17 +129,40 @@ img {
 }
 
 .menu a {
-    padding: 2 rem;
+    padding: 2rem;
     width: inherit;
     display: block;
     font-size: 1.5rem;
     text-decoration: none;
     color: var(--color);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease
 }
 
 .menu a:hover {
     font-weight: bold;
     color: var(--color);
     background-color: var(--main-modal-color);
+}
+
+
+/*Botones reloj*/
+
+#active {
+    background-color: rgb(37, 174, 238);
+    width: 10%px;
+    border-radius: 1rem;
+}
+
+.stage {
+    background-color: var(--second-color);
+    display: flex;
+    min-height: 90vh;
+}
+
+.ball {
+    background-color: lawngreen;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin: auto;
 }

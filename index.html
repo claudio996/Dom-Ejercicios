@@ -10,7 +10,7 @@
     <title>Exercises Dom</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css" rel="stylesheet">
     <!--<link href="style.css" rel="stylesheet">!-->
-    <link href="dist/sytle.css" rel="stylesheet">
+    <link href="dist/css/sytle.css" rel="stylesheet">
 </head>
 
 <body data-dark>
@@ -28,12 +28,30 @@
     <aside class="panel">
         <nav class="menu">
             <a href="#seccion1">Reloj digital</a>
+            <a href="#seccion2">Eventos del teclado</a>
+
         </nav>
     </aside>
     <main>
+        <section id="seccion1" class="section">
+            <h1>reloj-digital</h1>
+            <div class="container">
+                <div id="clock"></div>
+                <button id="active">Ver reloj</button>
+                <button id="stop">Pausar</button>
+                <button id="enable-alarm">Cuenta regresiva</button>
+                <button id="disable-alarm">Desactivar alarma</button>
+            </div>
+        </section>
+
+        <section id="seccion2" class="section">
+            <h1>Eventos del teclado</h1>
+            <article class="stage"></article>
+            <div class="ball">
+            </div>
+        </section>
 
     </main>
-
     <script src="js/main.js" type="module"></script>
 </body>
 
