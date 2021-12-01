@@ -11,6 +11,7 @@ import responsiveT from "./responsiveTester.js";
 import networkDetect from "./redDetetection.js";
 import darkMode from "./themeDark.js";
 import camDetect from "./camDetetction.js";
+import Geo from "./geolocation.js";
 
 const d = document;
 d.addEventListener("DOMContentLoaded", e => {
@@ -23,6 +24,7 @@ d.addEventListener("DOMContentLoaded", e => {
     responsiveT("responsiveTester");
     //   userDeviceInfo("user-device");
     camDetect('camera');
+    Geo('geolocation')
 
 
 });
