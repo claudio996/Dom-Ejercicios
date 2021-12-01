@@ -170,3 +170,51 @@ img {
 #count-down {
     background-color: lawngreen;
 }
+
+
+/*Network status*/
+
+.online,
+.offline {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem;
+    bottom: 1rem;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(238, 77, 37);
+    text-align: center;
+    color: #ffff;
+}
+
+.offline {
+    background-color: crimson;
+}
+
+.dark-theme-btn {
+    position: fixed;
+    bottom: 1vh;
+    left: 1vw;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    font-weight: bold;
+    font-size: 2rem;
+    transition: all 0.3s ease-out;
+}
+
+.dark-theme-btn:hover {
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
+
+.dark-mode {
+    background-color: var(--second-color);
+    color: var(--main-color);
+}
