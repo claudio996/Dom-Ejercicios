@@ -11,6 +11,7 @@
     --container-width: 1200px;
     /*Tamaño de container*/
     --color: rgba(8, 7, 7, 0.76);
+    --errorColor: red;
 }
 
 html {
@@ -249,4 +250,71 @@ img {
     visibility: hidden;
     opacity: 0;
     order: 1;
+}
+
+
+/*style from form*/
+
+.contact-form {
+    --form-ok-color: green;
+    --form-error-color: green;
+    margin: 1rem auto;
+    display: block;
+    width: 100%;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+
+.contact-form legend,
+.contact-form-response {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.contact-form *::placeholder {
+    color: black;
+}
+
+.contact-form[required]:valid {
+    border: this solid var(--form-ok-color);
+}
+
+.contact-form[required]:invalid {
+    border: this solid var(--form-error-color);
+}
+
+.contact-form-error {
+    margin-top: -1rem;
+    font-size: 80%;
+    background-color: var(--form-error-color);
+    color: #ffff;
+    transition: all 800ms ease;
+}
+
+.contact-form-error.is-active {
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none {
+    display: none;
+}
+
+@keyframes show-message {
+    0% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
 }
