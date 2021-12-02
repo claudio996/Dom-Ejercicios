@@ -11,7 +11,8 @@ import responsiveT from "./responsiveTester.js";
 import networkDetect from "./redDetetection.js";
 import darkMode from "./themeDark.js";
 import camDetect from "./camDetetction.js";
-import Geo from "./geolocation.js";
+//import Geo from "./geolocation.js";
+import filterCard from "./filterCards.js";
 
 const d = document;
 d.addEventListener("DOMContentLoaded", e => {
@@ -23,8 +24,9 @@ d.addEventListener("DOMContentLoaded", e => {
     //   responsive("gmaps", "(min-width:1024px)", `<a href = "https://goo.gl/maps/jgH2mmn3DbWriN5x7" target="_blank" rel "noopeer">Ver Mapa</a>`, `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3251.1437545464587!2d-71.66816658474814!3d-35.42646878025449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9665c6a014abd285%3A0x444443c9367d5a75!2sPlaza%20De%20Armas%20de%20Talca!5e0!3m2!1ses!2scl!4v1637182874153!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>`);
     responsiveT("responsiveTester");
     //   userDeviceInfo("user-device");
-    camDetect('camera');
-    Geo('geolocation')
+    //camDetect('camera');
+    //Geo('geolocation');
+    filterCard('.card-filter', '.card');
 
 
 });
@@ -32,7 +34,8 @@ d.addEventListener("DOMContentLoaded", e => {
 
 d.addEventListener("keydown", e => {
 
-    MoveBall(e, '.stage', '.ball')
+    //MoveBall(e, '.stage', '.ball')
+
 
 });
 
