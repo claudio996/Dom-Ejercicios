@@ -10,10 +10,11 @@ import digitalClock, { alarm } from "./reloj.js";
 import responsiveT from "./responsiveTester.js";
 import networkDetect from "./redDetetection.js";
 import darkMode from "./themeDark.js";
-import camDetect from "./camDetetction.js";
+import validation from "./validation.js";
+//import camDetect from "./camDetetction.js";
 //import Geo from "./geolocation.js";
-import filterCard from "./filterCards.js";
-import smathVideo from "./smartVideo.js";
+//import filterCard from "./filterCards.js";
+//import smathVideo from "./smartVideo.js";
 
 const d = document;
 d.addEventListener("DOMContentLoaded", e => {
@@ -27,8 +28,9 @@ d.addEventListener("DOMContentLoaded", e => {
     //   userDeviceInfo("user-device");
     //camDetect('camera');
     //Geo('geolocation');
-    filterCard('.card-filter', '.card');
-    smathVideo()
+    //filterCard('.card-filter', '.card');
+    // smathVideo()
+    validation()
 
 });
 
